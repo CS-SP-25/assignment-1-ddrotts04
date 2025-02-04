@@ -23,14 +23,14 @@ public class SaleTaxCalculator {
         State state = new State(stateName);
 
         // Set tax behavior dynamically
-        if (stateName.equalsIgnoreCase("problem1.Indiana")) {
+        if (stateName.equalsIgnoreCase("Indiana")) {
             state.setTaxBehavior(new SevenPercent());
-        } else if (stateName.equalsIgnoreCase("problem1.Alaska")) {
+        } else if (stateName.equalsIgnoreCase("Alaska")) {
             state.setTaxBehavior(new NoTax());
-        } else if (stateName.equalsIgnoreCase("problem1.Hawaii")) {
+        } else if (stateName.equalsIgnoreCase("Hawaii")) {
             state.setTaxBehavior(new FourPointFivePercent());
         } else {
-            System.out.println("Error: Unsupported state. Please provide 'problem1.Indiana', 'problem1.Alaska', or 'problem1.Hawaii'.");
+            System.out.println("Error: Unsupported state. Please provide 'Indiana', 'Alaska', or 'Hawaii'.");
             return;
         }
 
